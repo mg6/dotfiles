@@ -13,6 +13,7 @@ export EDITOR='vim'
 # Aliases
 alias v="vim"
 alias nano="vim"
+alias tmux="tmux -2"
 
 # RVM
 export PATH="$PATH:$HOME/.rvm/bin"
