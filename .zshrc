@@ -12,6 +12,7 @@ export EDITOR='vim'
 
 # Aliases
 alias v="vim"
+alias gv="gvim"
 alias nano="vim"
 alias tmux="tmux -2"
 
