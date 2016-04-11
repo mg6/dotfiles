@@ -20,3 +20,18 @@ alias v="vim"
 # Functions
 kw() { grep $* -r . }
 
+serve() {
+    [[ -z "$1" ]] && port=8080 || port=$1
+
+    if [[ -s "index.php" ]] {
+        (sleep 1 && firefox localhost:$port)&
+        php -S localhost:$port
+    } elif [[ -d "_site" ]] {
+        (sleep 1 && firefox localhost:$port)&
+        jekyll serve --port $port
+    } else {
+        (sleep 1 && firefox localhost:$port)&
+        python3 -m http.server $port
+    }
+}
+
