@@ -16,6 +16,12 @@ alias nano="vim"
 alias tmux="tmux -2"
 alias todo='grep -e "FIXME\|TODO" -r . -i'
 alias v="vim"
+alias yt="youtube-dl -x"
+
+alias t="task"
+alias st="task pro:Studia"
+alias z="task pro:Zakupy"
+alias kup="task pro:Zakupy add"
 
 # Functions
 kw() { grep $* -r . }
