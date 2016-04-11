@@ -5,8 +5,8 @@ plugins=(git mercurial rvm)
 [[ -s "$HOME/.oh-my-zsh" ]] && export ZSH=$HOME/.oh-my-zsh && source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
-export EDITOR='vim'
+export EDITOR="vim"
+export VISUAL="$EDITOR"
 
 # Aliases
 alias gv="gvim"
