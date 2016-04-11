@@ -24,7 +24,17 @@ alias z="task pro:Zakupy"
 alias kup="task pro:Zakupy add"
 
 # Functions
-kw() { grep $* -r . }
+api-diff() {
+    diff -u <(curl "$1" | python -m json.tool) <(curl "$2" | python -m json.tool)
+}
+
+kw() {
+    grep $* -r .
+}
+
+noh() {
+    nohup $* &>/dev/null &
+}
 
 serve() {
     [[ -z "$1" ]] && port=8080 || port=$1
@@ -40,6 +50,8 @@ serve() {
         python3 -m http.server $port
     }
 }
+
+alias show="kw"
 
 # Android tools
 if [ -d "$HOME/Android/Sdk/platform-tools" ]; then
