@@ -46,4 +46,10 @@ if [ -d "$HOME/Android/Sdk/platform-tools" ]; then
     export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
 fi
 
+# RVM
+if [[ -d "$HOME/.rvm" ]] then
+    export PATH="$PATH:$HOME/.rvm/bin"
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+fi
+
 [ -s "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
