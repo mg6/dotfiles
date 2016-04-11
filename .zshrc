@@ -12,6 +12,7 @@ export VISUAL="$EDITOR"
 alias gv="gvim"
 alias hgpu="hg pull --update"
 alias hgr="hg recent"
+alias json-pretty="python -m json.tool"
 alias nano="vim"
 alias tmux="tmux -2"
 alias todo='grep -e "FIXME\|TODO" -r . -i'
