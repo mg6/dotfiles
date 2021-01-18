@@ -30,6 +30,7 @@ imap <F9> <Esc>:w<CR>:!./%<CR>
 set expandtab
 set sw=2
 set sts=2
+set modeline
 
 " misc
 set enc=utf-8
