@@ -1,7 +1,7 @@
 # oh-my-zsh configuration
 ZSH_THEME="mg6"
 ZSH_CUSTOM=$HOME/.zsh_custom
-plugins=(git mercurial rvm)
+plugins=(git mercurial)
 
 [[ -s "$HOME/.oh-my-zsh" ]] && export ZSH=$HOME/.oh-my-zsh && source $ZSH/oh-my-zsh.sh
 
@@ -54,16 +54,5 @@ serve() {
 }
 
 alias show="kw"
-
-# Android tools
-if [ -d "$HOME/Android/Sdk/platform-tools" ]; then
-    export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
-fi
-
-# RVM
-if [[ -d "$HOME/.rvm" ]] then
-    export PATH="$PATH:$HOME/.rvm/bin"
-    [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-fi
 
 [ -s "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
