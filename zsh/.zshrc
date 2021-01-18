@@ -1,5 +1,6 @@
 # oh-my-zsh configuration
-ZSH_THEME="mrtazz"
+ZSH_THEME="mg6"
+ZSH_CUSTOM=$HOME/.zsh_custom
 plugins=(git mercurial rvm)
 
 [[ -s "$HOME/.oh-my-zsh" ]] && export ZSH=$HOME/.oh-my-zsh && source $ZSH/oh-my-zsh.sh
