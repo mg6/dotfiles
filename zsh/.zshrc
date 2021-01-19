@@ -5,6 +5,10 @@ plugins=(git mercurial)
 
 [[ -s "$HOME/.oh-my-zsh" ]] && export ZSH=$HOME/.oh-my-zsh && source $ZSH/oh-my-zsh.sh
 
+# User scripts in PATH
+[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+[ -d "$HOME/bin" ] && export PATH="$HOME/bin:$PATH"
+
 # User configuration
 export EDITOR="vim"
 export VISUAL="$EDITOR"
