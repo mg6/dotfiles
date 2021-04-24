@@ -1,0 +1,14 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+/*
+#navigator-toolbox {visibility: collapse;}
+#nav-bar { visibility: collapse; }
+#toolbar-menubar { visibility: collapse; }
+*/
+#TabsToolbar {visibility: collapse !important;}
+
+/*
+In about:config, set:
+  - toolkit.legacyUserProfileCustomizations.stylesheets = true
+  - ui.prefersReducedMotion = 1
+*/
