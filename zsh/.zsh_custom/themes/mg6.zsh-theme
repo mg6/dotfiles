@@ -1,4 +1,5 @@
-PROMPT='%{$fg_bold[red]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%}%{$fg_bold[green]%}$(git_prompt_info2)$(hg_prompt_info2)%{$reset_color%}%  %# '
+PROMPT='%{$fg_bold[red]%}%m%{$reset_color%} %{$fg[cyan]%}%c%{$reset_color%}%{$fg_bold[green]%}$(git_prompt_info2)$(hg_prompt_info2)%{$reset_color%}% %{$fg_bold[yellow]%}$(vault_info)%{$reset_color%}%  %# '
+
 # RPROMPT='%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}% '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="(git "
@@ -22,5 +23,12 @@ git_prompt_info2() {
 hg_prompt_info2() {
   if [ $(in_hg) ]; then
     hg_prompt_info
+  fi
+}
+
+vault_info() {
+  if ! [ -z "${AWS_VAULT+x}" ]; then
+    echo -n ' '
+    echo "(as $AWS_VAULT)"
   fi
 }
