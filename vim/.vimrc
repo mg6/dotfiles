@@ -40,3 +40,5 @@ syntax on
 
 " theme
 colors monokai
+
+let g:GPGDefaultRecipients=["maciej@gamrat.it"]
