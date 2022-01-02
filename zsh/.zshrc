@@ -1,7 +1,7 @@
 # oh-my-zsh configuration
 ZSH_THEME="mg6"
 ZSH_CUSTOM=$HOME/.zsh_custom
-plugins=(git mercurial)
+plugins=(git mercurial fzf)
 
 [[ -s "$HOME/.oh-my-zsh" ]] && export ZSH=$HOME/.oh-my-zsh && source $ZSH/oh-my-zsh.sh
 
