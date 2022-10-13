@@ -27,8 +27,9 @@ hg_prompt_info2() {
 }
 
 vault_info() {
-  if ! [ -z "${AWS_VAULT+x}" ]; then
+  local profile="${AWS_VAULT-${AWS_PROFILE}}"
+  if ! [ -z "${profile}" ]; then
     echo -n ' '
-    echo "(as $AWS_VAULT)"
+    echo "(as $profile)"
   fi
 }
