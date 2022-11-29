@@ -24,20 +24,6 @@ alias todo='grep -e "FIXME\|TODO" -r . -i'
 alias v="vim"
 alias yt="youtube-dl -x"
 
-alias t="task"
-alias st="task pro:Studia"
-alias z="task pro:Zakupy"
-alias kup="task pro:Zakupy add"
-
-# Functions
-api-diff() {
-    diff -u <(curl "$1" | python -m json.tool) <(curl "$2" | python -m json.tool)
-}
-
-kw() {
-    grep $* -r .
-}
-
 noh() {
     nohup $* &>/dev/null &
 }
@@ -56,7 +42,5 @@ serve() {
         python3 -m http.server $port
     }
 }
-
-alias show="kw"
 
 [ -s "$HOME/.zshrc_local" ] && source "$HOME/.zshrc_local"
