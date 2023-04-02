@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -xeuo pipefail
+
+HOST="$1"
+DISP="${2:-:0}"
+PORT="${3:-5900}"
+
+ssh "$HOST" pgrep -v x11vnc &>/dev/null
+ssh -fL "$PORT:localhost:$PORT" "$HOST" "x11vnc -clear_all -once -localhost -display $DISP"
+sleep 3
+
+nohup vncviewer -FullScreen -AutoSelect=0 -QualityLevel 1 -CustomCompressLevel -CompressLevel 1 localhost &>/dev/null &
