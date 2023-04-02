@@ -1,21 +1,12 @@
-[submodule "vim/.vim/bundle/vim-bundler"]
-	path = vim/.vim/bundle/vim-bundler
-	url = https://github.com/tpope/vim-bundler.git
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/.vim/bundle/vim-rails"]
-	path = vim/.vim/bundle/vim-rails
-	url = https://github.com/tpope/vim-rails.git
 [submodule "vim/.vim/bundle/vim-ruby"]
 	path = vim/.vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 [submodule "vim/.vim/bundle/vim-endwise"]
 	path = vim/.vim/bundle/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
-[submodule "vim/.vim/bundle/nerdtree"]
-	path = vim/.vim/bundle/nerdtree
-	url = https://github.com/preservim/nerdtree.git
 [submodule "vim/.vim/bundle/tabular"]
 	path = vim/.vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
