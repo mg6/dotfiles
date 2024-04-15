@@ -6,7 +6,6 @@ ZSH_CUSTOM=$HOME/.zsh_custom
 
 plugins=(
     git
-    mercurial
     fzf
     tmux
 )
