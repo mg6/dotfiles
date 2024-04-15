@@ -1,11 +1,28 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
 
-/*
-#navigator-toolbox {visibility: collapse;}
-#nav-bar { visibility: collapse; }
-#toolbar-menubar { visibility: collapse; }
-*/
-#TabsToolbar {visibility: collapse !important;}
+/* see: https://github.com/piroor/treestyletab/wiki/Code-snippets-for-custom-style-rules */
+
+/* hide tabs at the top of browser window */
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+/* hide header in tab sidebar */
+#sidebar-header {
+  display: none !important;
+}
+
+/* auto hide sidebar in full screen */
+:root[sizemode="fullscreen"] #sidebar-box,
+:root[sizemode="fullscreen"] #sidebar-splitter {
+  display: none !important;
+  width: 0px !important;
+}
+
+/* show toolbar icons in gray when not hovered */
+toolbarbutton:not(:hover) {
+  filter: grayscale(100%) !important;
+}
 
 /*
 In about:config, set:
