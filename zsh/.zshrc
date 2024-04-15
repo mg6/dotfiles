@@ -1,7 +1,17 @@
 # oh-my-zsh configuration
 ZSH_THEME="mg6"
 ZSH_CUSTOM=$HOME/.zsh_custom
-plugins=(git mercurial fzf)
+
+plugins=(
+    git
+    mercurial
+    fzf
+    tmux
+)
+
+if [ -z "$TMUX" ] && command -v tmux &>/dev/null; then
+    ZSH_TMUX_AUTOSTART=true
+fi
 
 [[ -s "$HOME/.oh-my-zsh" ]] && export ZSH=$HOME/.oh-my-zsh && source $ZSH/oh-my-zsh.sh
 
