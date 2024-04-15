@@ -1,4 +1,6 @@
 # oh-my-zsh configuration
+zstyle ':omz:alpha:lib:git' async-prompt no
+
 ZSH_THEME="mg6"
 ZSH_CUSTOM=$HOME/.zsh_custom
 
