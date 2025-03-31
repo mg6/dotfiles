@@ -6,19 +6,18 @@ Wants=network-online.target
 
 [Service]
 Type=notify
-ExecStartPre=/usr/bin/mkdir -p %h/mnt/%i
-ExecStart= \
-  /usr/bin/rclone mount \
+ExecStartPre=/usr/bin/mkdir -p %t/rclone/%i
+ExecStart=/usr/bin/rclone mount \
     --config=%h/.config/rclone/rclone.conf \
     --vfs-cache-mode full \
     --vfs-cache-max-age 7d \
     --vfs-cache-max-size 10G \
     --vfs-cache-min-free-space 10G \
     --log-level INFO \
-    --log-file /tmp/rclone-%i.log \
+    --log-file %T/rclone-%i.log \
     --umask 022 \
-    %i: %h/mnt/%i
-ExecStop=/bin/fusermount -uz %h/mnt/%i
+    %i: %t/rclone/%i
+ExecStop=/bin/fusermount -uz %t/rclone/%i
 
 [Install]
 WantedBy=default.target
