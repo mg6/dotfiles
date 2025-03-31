@@ -36,8 +36,8 @@ if ! zgenom saved; then
     zgenom ohmyzsh plugins/fzf
     zgenom ohmyzsh plugins/tmux
 
-    # Local configuration
-    [ -d "${HOME}/.zshrc.d" ] && zgenom load mattmc3/zshrc.d
+    # Source .zshrc.d
+    zgenom load mattmc3/zshrc.d
 
     # Save all to init script
     zgenom save
