@@ -9,11 +9,6 @@ export VISUAL="vim"
 
 # Configure zsh plugins
 export ZSH_TMUX_AUTOSTART=true
-export ZSH_CUSTOM="${HOME}/.zsh_custom"
-
-# Expose scripts in PATH
-[ -d "${HOME}/.local/bin" ] && export PATH="${HOME}/.local/bin:${PATH}"
-[ -d "${HOME}/bin" ] && export PATH="${HOME}/bin:${PATH}"
 
 # Load zgenom
 source "${HOME}/.zgenom/zgenom.zsh"
@@ -47,12 +42,3 @@ if ! zgenom saved; then
     zgenom compile "${HOME}/.zshrc.d"
     zgenom compile "${ZSH_CUSTOM}"
 fi
-
-# Theme
-source "${ZSH_CUSTOM}/themes/mg6.zsh-theme"
-
-# Adjust options
-alias diff="diff -u"
-alias less="less -r"
-alias rsync="rsync --info=progress2"
-alias tmux="tmux -2"
