@@ -1,0 +1,13 @@
+[Unit]
+Description=ActivityWatch Sync
+After=aw-server.service network.target
+Requires=aw-server.service
+
+[Service]
+Type=simple
+ExecStart=aw-sync
+ExecStartPre=/usr/bin/mkdir -p ${AW_SYNC_DIR}
+Environment=AW_SYNC_DIR=%h/.local/share/activitywatch/aw-sync
+
+[Install]
+WantedBy=default.target
