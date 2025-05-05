@@ -1,0 +1,9 @@
+[Unit]
+Description=Suspend
+
+[Timer]
+Unit=suspend.service
+OnCalendar=*-*-* %I
+
+[Install]
+WantedBy=timers.target
